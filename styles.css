@@ -169,6 +169,11 @@ a {
   padding: 1em 3em;
 }
 
+a:hover {
+  background-color: var(--Green);
+  color: black;
+}
+
 @media screen and (max-width: 670px) {
   main {
     min-width: 60%;
