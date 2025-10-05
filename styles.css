@@ -106,9 +106,10 @@ body {
   justify-content: center;
   align-items: center;
   background-color: var(--Grey900);
+
 }
 
-main {
+.container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -116,12 +117,11 @@ main {
   background-color: var(--Grey800);
   padding: 2.3em 0;
   border-radius: 2.5%;
-  width: 100%;
-  max-width: 35%;
+  width: clamp(250px, 30%, 410px);
 
 }
 
-.userSection {
+.container__user {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -130,29 +130,30 @@ main {
 }
 
 
-img {
-  max-width: 30%;
+.user__Img {
+  max-width: 25%;
   border-radius: 50%;
-  margin: 1.2rem 0 2rem 0;
+  margin: 1.2rem 0 1.5rem 0;
+}
+h1 {
+  font-size: clamp(1.3rem, 2.3vw , 1.4rem);
+
+  font-weight: bold;
 }
 
-.Address {
+.user__Address {
   color: var(--Green);
   font-weight: bold;
+  font-size: 1rem;
 }
 
-h1 {
-  font-size: calc(1rem + 1.5vw);
-  font-weight: bold;
-}
-
-.UserTraces {
+.user__Traces {
   padding: 1.3em;
   font-weight: 300;
   font-stretch: 2.2em;
 }
 
-.linksSection {
+.container__links{
   display: flex;
   flex-direction: column;
   width: 80%;
@@ -166,7 +167,8 @@ a {
   text-decoration: none;
   font-weight: 600;
   text-align: center;
-  padding: 1em 3em;
+  padding: 0.7em 3em;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 a:hover {
@@ -174,8 +176,3 @@ a:hover {
   color: black;
 }
 
-@media screen and (max-width: 670px) {
-  main {
-    min-width: 60%;
-  }
-}
